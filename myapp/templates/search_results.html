@@ -1,0 +1,16 @@
+{% load static %}
+
+
+<h1>Search Results</h1>
+
+
+<ul>
+  {% for item in object_list %}
+    <li>
+      {{ item.title }}, {{ item.category }}
+    </li>
+    <li>
+      <img src="{{ item.image.url }}" alt="image">
+    </li>
+  {% endfor %}
+</ul>
